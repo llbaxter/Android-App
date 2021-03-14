@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="" android:icon="@drawable/ic_round_home" android:id="@+id/homeFragment"/>
+    <item android:title="" android:icon="@drawable/ic_round_person" android:id="@+id/profileFragment"/>
+    <item android:title="" android:icon="@drawable/ic_round_add" android:id="@+id/addFragment"/>
+    <item android:title="" android:icon="@drawable/ic_round_import_contacts" android:id="@+id/contactsFragment"/>
+    <item android:title="" android:icon="@drawable/ic_round_chat" android:id="@+id/messagesFragment"/>
+</menu>
