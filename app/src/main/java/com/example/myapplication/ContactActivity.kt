@@ -7,6 +7,7 @@ import android.graphics.BitmapFactory
 import android.net.Uri
 import android.os.Bundle
 import android.provider.ContactsContract
+import android.util.Log
 import android.widget.ListAdapter
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
@@ -62,17 +63,11 @@ class ContactActivity : AppCompatActivity() {
                     )
                     if (phoneNumberCursor != null) {
                         while (phoneNumberCursor.moveToNext()) {
-                            phoneNumber += phoneNumberCursor.getString(
-                                    phoneNumberCursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER)
-                            ) + "\n"
+                            phoneNumber += phoneNumberCursor.getString(phoneNumberCursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER))
                         }
                         phoneNumberCursor.close()
                     }
-                    val contactPhotoUri = Uri.withAppendedPath(ContactsContract.Contacts.CONTENT_URI, rowID)
-                    val photoStream = ContactsContract.Contacts.openContactPhotoInputStream(contentResolver, contactPhotoUri)
-                    val buffer = BufferedInputStream(photoStream)
-                    val contactPhoto = BitmapFactory.decodeStream(buffer)
-                    contactList.add(Contact(name, phoneNumber, contactPhoto))
+                    contactList.add(Contact(name, phoneNumber))
                 }
             }
             contactsCursor?.close()

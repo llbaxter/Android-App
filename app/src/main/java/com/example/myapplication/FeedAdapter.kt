@@ -39,7 +39,6 @@ class FeedAdapter(val context: Context, val feed: List<Post>) : RecyclerView.Ada
         } else {
             0
         }
-        return super.getItemViewType(position)
     }
 
     abstract inner class FeedViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

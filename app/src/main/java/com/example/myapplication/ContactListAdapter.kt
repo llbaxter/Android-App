@@ -1,6 +1,7 @@
 package com.example.myapplication
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -24,7 +25,9 @@ class ContactListAdapter(val context: Context, val list: ArrayList<Contact>) : B
         val view = LayoutInflater.from(context).inflate(R.layout.item_layout_contact, parent, false)
         view.tvContactName.text = list[position].name
         view.tvContactNumber.text = list[position].phoneNumber
-        view.ivContact.setImageBitmap(list[position].contactPhoto)
+
+
         return view
     }
+
 }
