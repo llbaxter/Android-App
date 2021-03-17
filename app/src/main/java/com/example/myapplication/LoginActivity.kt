@@ -20,7 +20,7 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        val intent = Intent(this, ContactActivity::class.java)
+        val intent = Intent(this, AddActivity::class.java)
         startActivity(intent)
 
 //        val intent = Intent(this, FeedActivity::class.java)
