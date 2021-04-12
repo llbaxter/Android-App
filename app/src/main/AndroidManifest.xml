@@ -3,9 +3,10 @@
     package="com.example.myapplication">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <uses-feature android:name="android.hardware.camera.any" />
+
     <uses-permission android:name="android.permission.CAMERA" />
 
     <application
@@ -15,30 +16,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
-        <activity android:name=".FeedActivity">
 
-        </activity>
-        <activity android:name=".ContactActivity">
-
-        </activity>
-
-        <activity android:name=".AddActivity">
-
-        </activity>
-
-        <activity android:name=".LoginActivity">
+        <activity android:name=".SplashScreenActivity"
+            android:theme="@style/Splash.MyApplication">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        <activity android:name=".FeedActivity"
+            android:theme="@style/Theme.MyApplication">
+
+        </activity>
+        <activity android:name=".ContactActivity"></activity>
+        <activity android:name=".AddActivity"></activity>
+        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".MainActivity"
+            android:theme="@style/Theme.MyApplication">
+
         </activity>
     </application>
 
