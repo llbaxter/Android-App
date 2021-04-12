@@ -16,27 +16,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
+        <service
+            android:name=".AppRunningService"
+            android:enabled="true"
+            android:exported="true"></service>
 
-        <activity android:name=".SplashScreenActivity"
-            android:theme="@style/Splash.MyApplication">
+        <activity
+            android:name=".SplashScreenActivity"
+            android:theme="@style/Theme.MyApplication">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".FeedActivity"
-            android:theme="@style/Theme.MyApplication">
-
-        </activity>
-        <activity android:name=".ContactActivity"></activity>
-        <activity android:name=".AddActivity"></activity>
-        <activity android:name=".LoginActivity"></activity>
-        <activity android:name=".MainActivity"
-            android:theme="@style/Theme.MyApplication">
-
-        </activity>
+        <activity
+            android:name=".FeedActivity"
+            android:theme="@style/Theme.MyApplication"></activity>
+        <activity android:name=".ContactActivity" />
+        <activity android:name=".AddActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/Theme.MyApplication"></activity>
     </application>
 
 </manifest>
