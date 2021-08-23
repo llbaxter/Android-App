@@ -19,7 +19,6 @@ class FeedAdapter(val context: Context, val feed: List<Post>) : RecyclerView.Ada
             1 -> FeedViewHolderText(LayoutInflater.from(context).inflate(R.layout.item_layout_text, parent, false))
             else -> FeedViewHolderImage(LayoutInflater.from(context).inflate(R.layout.item_layout_image, parent, false))
         }
-
     }
 
     override fun onBindViewHolder(holder: FeedViewHolder, position: Int) {
@@ -50,8 +49,11 @@ class FeedAdapter(val context: Context, val feed: List<Post>) : RecyclerView.Ada
     inner class FeedViewHolderImage(itemView: View) : FeedViewHolder(itemView) {
         override fun setData(item: Post?, position: Int) {
             if (item != null) {
+                itemView.tvSubreddit.text = "r/" + item.subreddit
                 itemView.tvTitle.text = item.title
                 itemView.tvText.text = item.text
+                itemView.tvUpvotes.text = item.upvotes.toString()
+                itemView.tvComments.text = item.numComments.toString()
             }
 
             if (item?.imgUrl != null) {
@@ -66,8 +68,11 @@ class FeedAdapter(val context: Context, val feed: List<Post>) : RecyclerView.Ada
     inner class FeedViewHolderText(itemView: View) : FeedViewHolder(itemView) {
         override fun setData(item: Post?, position: Int) {
             if (item != null) {
+                itemView.tvSubreddit.text = "r/" + item.subreddit
                 itemView.tvTitle.text = item.title
                 itemView.tvText.text = item.text
+                itemView.tvUpvotes.text = item.upvotes.toString()
+                itemView.tvComments.text = item.numComments.toString()
             }
         }
     }

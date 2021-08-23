@@ -6,4 +6,4 @@ data class Post(
     val subreddit: String,
     val imgUrl: String?,
     val upvotes: Int,
-    val num_comments: Int)
+    val numComments: Int)

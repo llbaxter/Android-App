@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<!--    <item-->
+<!--        android:id="@+id/subAll"-->
+<!--        android:title="All"/>-->
+<!--    <item-->
+<!--        android:id="@+id/subPopular"-->
+<!--        android:title="Popular"/>-->
+<!--    <item-->
+<!--        android:id="@+id/subJokes"-->
+<!--        android:title="Jokes"/>-->
+<!--    <item-->
+<!--        android:id="@+id/subNews"-->
+<!--        android:title="News"/>-->
+<!--    <item-->
+<!--        android:id="@+id/subAskreddit"-->
+<!--        android:title="Askreddit"/>item android:title="Item" />-->
+    <item
+        android:title="New"
+        android:icon="@drawable/ic_baseline_insights_24"
+        android:id="@+id/sortNew" />
+    <item
+        android:title="Top"
+        android:icon="@drawable/ic_sharp_bar_chart_24"
+        android:id="@+id/sortTop"/>
+    <item
+        android:title="Hot"
+        android:icon="@drawable/ic_round_local_fire_department_24"
+        android:id="@+id/sortHot"/>
+    <item
+        android:title="Controversial"
+        android:icon="@drawable/ic_round_priority_high_24"
+        android:id="@+id/sortControversial"/>
+</menu>

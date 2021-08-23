@@ -11,7 +11,9 @@ class SplashScreenActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash_screen)
 
         iv_splash.animate().setDuration(2000).alpha(0f).withEndAction {
-            val i = Intent(this, FeedActivity::class.java)
+            val i = Intent(this, ContactActivity::class.java)
+            i.putExtra("subreddit", "all")
+            i.putExtra("sort", "hot")
             startActivity(i)
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
             finish()
